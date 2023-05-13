@@ -7,6 +7,7 @@
     <MainNew></MainNew>
     <MainPopular></MainPopular>
   </main>
+  <Attribution></Attribution>
 </template>
 
 <script>
@@ -14,6 +15,7 @@ import MainHero from './components/MainHero';
 import HeaderNav from './components/HeaderNav';
 import MainNew from './components/MainNew';
 import MainPopular from './components/MainPopular';
+import Attribution from './components/Attribution'
 
 
 export default {  
@@ -23,6 +25,7 @@ export default {
     MainHero,
     MainNew,
     MainPopular,
+    Attribution
 }
 }
 
