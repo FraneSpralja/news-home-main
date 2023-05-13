@@ -1,0 +1,22 @@
+@use '../helpers/functions' as *;
+@use '../mixin/breakpoints' as *;
+
+.card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: rem(15);
+
+    &-img {
+        flex: 0 0 auto;
+        max-width: min(35%, rem(100));
+    }
+
+    &-body {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        row-gap: rem(12);
+    }
+}

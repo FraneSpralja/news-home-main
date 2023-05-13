@@ -1,0 +1,16 @@
+@use '../helpers/functions' as *;
+
+$brekpoints-up: (
+    'x-small': rem(320),
+    'small': rem(576),
+    'medium': rem(768),
+    'large': rem(992),
+    'extra-large': rem(1200),
+    'xx-large': rem(1440),
+);
+
+@mixin breakpoint($size) {
+    @media (min-width: map-get($brekpoints-up, $size)) {
+        @content;
+    }
+}

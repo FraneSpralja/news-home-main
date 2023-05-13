@@ -1,0 +1,11 @@
+@use '../base/variables' as *;
+@use '../base/typograpfy' as *;
+@use '../helpers/functions' as *;
+@use '../mixin/breakpoints' as *;
+
+.main {
+    @include breakpoint(large) {
+        display: grid;
+        grid-template-columns: calc(66%) calc(34%);
+    }
+}

@@ -1,0 +1,53 @@
+@use '../base/variables' as *;
+@use '../base/typograpfy' as *;
+@use '../helpers/functions' as *;
+@use '../mixin/breakpoints' as *;
+
+.main-new {
+    background-color: $very-dark-blue;
+    color: $off-white;
+    padding-inline: rem(16);
+    padding-block: rem(20);
+    margin-bottom: rem(40);
+
+    & > .new-title {
+        font-size: rem(28);
+        font-weight: $weight-700;
+        color: $soft-orange;
+        margin-bottom: rem(20);
+    }
+
+    &__box > &__list {
+        display: flex;
+        flex-direction: column;
+        gap: rem(30);
+    }
+    
+    &__item {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        gap: rem(15);
+        padding-bottom: rem(20);
+        border-bottom: 1px solid $grayish-blue;
+
+        &:hover > h3 {
+            color: $soft-orange;
+        }
+
+        & > h3 {
+            font-size: rem(18);
+            font-weight: $weight-700;
+        }
+
+        & > p {
+            color: $grayish-blue;
+            line-height: rem(28);
+        }
+
+        &:last-of-type {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+    }
+}

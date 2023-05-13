@@ -1,0 +1,27 @@
+@use '../base/variables' as *;
+@use '../base/typograpfy' as *;
+@use '../helpers/functions' as *;
+@use '../mixin/breakpoints' as *;
+
+
+.button {
+    padding-inline: rem(22);
+    padding-block: rem(12);
+    background-color: $soft-red;
+    color: $off-white;
+    max-width: 60%;
+    white-space: nowrap;
+    letter-spacing: rem(2);
+    margin-top: rem(12);
+    cursor: pointer;
+    transition: background-color .5s;
+
+    @include breakpoint("x-small") {
+        max-width: 50%;
+    }
+
+    &:hover {
+        background-color: $very-dark-blue;
+    }
+
+}

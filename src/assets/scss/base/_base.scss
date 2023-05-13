@@ -1,0 +1,26 @@
+@use 'typograpfy' as *;
+@use 'variables' as *;
+@use '../helpers/functions' as *;
+@use '../mixin/breakpoints' as *;
+
+@forward 'reset';
+
+
+html {
+    font-family: $font-stack;
+    background-color: $off-white;
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+    font-size: rem(15);
+    padding: rem(30);
+
+    @include breakpoint(large) {
+        max-width: 90vw;
+        margin-inline: auto;
+        padding-inline: 0;
+        padding-block-start: rem(30);
+    }
+}

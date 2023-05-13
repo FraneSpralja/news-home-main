@@ -15,5 +15,10 @@ npm run serve
 npm run build
 ```
 
+### sass watch
+```
+sass --watch src/assets/scss/main.scss:src/assets/css/main.css
+```
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).

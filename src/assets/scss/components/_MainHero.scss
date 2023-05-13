@@ -1,0 +1,61 @@
+@use '../base/variables' as *;
+@use '../base/typograpfy' as *;
+@use '../helpers/functions' as *;
+@use '../mixin/breakpoints' as *;
+
+.header-hero {
+
+    display: grid;
+    gap: rem(15);
+    margin-bottom: rem(40);
+
+    & > img.hero {
+        width: 100%;
+        height: auto;
+
+        @include breakpoint(large) {
+            grid-column: 1 / 3;
+        }
+    }
+
+    & > .header-title {
+        font-size: rem(40);
+        font-weight: $weight-800;
+
+        @include breakpoint(large) {
+            font-size: rem(50);
+            max-width: rem(300);
+        }
+    }
+
+    & > .header-text {
+        color: $dark-grayish-blue;
+        line-height: rem(25);
+
+        @include breakpoint(large) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+
+    &__button--desktop {
+        display: none;
+    }
+    
+    @include breakpoint(large) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr auto;
+        padding-inline-end: rem(30);
+        
+        &__button--mobile {
+            display: none;
+        }
+
+        &__button--desktop {
+            display: block;
+        }
+    }
+
+
+}

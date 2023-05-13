@@ -1,0 +1,14 @@
+// FONT
+/* Font family */
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../font/Inter-VariableFont_slnt-wght.ttf') format('truetype');
+}
+
+$font-stack: 'Inter', sans-seriff;
+
+/* Weight */
+$weight-400: 400;
+$weight-700: 700;
+$weight-800: 800;
